@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,600;0,800;1,300&display=swap');
+
+body {
+    color: $color-dark;
+    font-family: Urbanista, system-ui, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+
+    @media (prefers-color-scheme: dark) {
+        color: $color-light;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-primary;
+    text-transform: uppercase;
+}

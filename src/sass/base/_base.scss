@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+body {
+    background-color: $color-light;
+
+    @media (prefers-color-scheme: dark) {
+        color: $color-dark;
+    }
+}
