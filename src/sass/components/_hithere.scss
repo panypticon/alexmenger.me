@@ -1,0 +1,57 @@
+@use '../abstracts/' as *;
+
+.hithere {
+    align-items: flex-end;
+    display: flex;
+    min-height: 85vh;
+    padding-top: 7.6rem;
+
+    &__textbox {
+        color: $color-light;
+
+        @include breakpoint-min('tab-port') {
+            background-color: $color-light;
+            border-radius: map-get($sizes, 'sm');
+            box-shadow: 0 0 map-get($sizes, 'xs') $shade-02 inset;
+            color: $color-dark;
+            max-width: calc(50% - #{map-get($sizes, 'sm')});
+            padding: map-get($sizes, 'lg');
+
+            @media (prefers-color-scheme: dark) {
+                background-color: $color-dark;
+                box-shadow: 0 0 map-get($sizes, 'xs') $shade-09 inset;
+                color: $color-light;
+            }
+        }
+
+        h1 {
+            font-size: 3.6rem;
+            margin-bottom: map-get($sizes, 'lg');
+            max-width: 70%;
+
+            @include breakpoint-min('tab-port') {
+                max-width: none;
+            }
+        }
+
+        p {
+            font-size: 2rem;
+            line-height: 1.35;
+            margin-bottom: map-get($sizes, 'sm');
+            max-width: 70%;
+
+            @include breakpoint-min('tab-port') {
+                max-width: none;
+            }
+        }
+
+        button {
+            margin-top: map-get($sizes, 'lg');
+            width: 100%;
+
+            @include breakpoint-min('tab-port') {
+                width: auto;
+            }
+        }
+    }
+}

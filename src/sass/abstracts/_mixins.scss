@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+// Default responsive breakpoints
+
+$breakpoints: (
+    'tab-port': 48em,
+    'tab-land': 64em,
+    'desktop': 78.125em
+);
+
+@mixin breakpoint-min($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+// Default paddings, responsive
+
+@mixin padding-default {
+    padding: map-get($sizes, 'sm');
+
+    @include breakpoint-min('tab-port') {
+        padding: map-get($sizes, 'lg');
+    }
+}
+
+@mixin padding-default-x {
+    padding: 0 map-get($sizes, 'sm');
+
+    @include breakpoint-min('tab-port') {
+        padding: 0 map-get($sizes, 'lg');
+    }
+}

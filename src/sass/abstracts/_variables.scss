@@ -1,7 +1,36 @@
+//////////////////////////////////////////////////
+// Colors
+
 $color-light: rgb(247, 247, 247);
 $color-dark: rgb(20, 20, 20);
 
 $color-primary: rgb(254, 198, 1);
+$color-primary-light: rgb(254, 228, 133);
+// CHANGE!!!
+$color-primary-dark: rgb(254, 198, 1);
 
 $color-secondary: rgb(82, 71, 194);
 $color-secondary-dark: rgb(59, 51, 153);
+
+$color-tertiary: rgb(255, 32, 110);
+$color-tertiary-dark: rgb(184, 0, 64);
+
+$shade-02: rgb(222, 222, 222);
+$shade-09: rgb(46, 46, 46);
+
+//////////////////////////////////////////////////
+// Gradients
+
+$gradient-secondary: linear-gradient(270deg, $color-secondary, $color-secondary-dark);
+$gradient-tertiary: linear-gradient(270deg, $color-tertiary-dark, $color-tertiary-dark);
+
+//////////////////////////////////////////////////
+// Spacing
+
+$sizes: (
+    'xs': 0.8rem,
+    'sm': 1.6rem,
+    'lg': 3.2rem
+);
+
+$max-width: 125rem;

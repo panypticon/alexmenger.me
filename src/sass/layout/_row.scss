@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+.row {
+    &.bg-gradient {
+        background: $gradient-secondary;
+
+        @media (prefers-color-scheme: dark) {
+            background: $gradient-tertiary;
+        }
+    }
+
+    section {
+        margin: 0 auto;
+        width: 100%;
+        max-width: $max-width;
+
+        @include padding-default;
+    }
+}
