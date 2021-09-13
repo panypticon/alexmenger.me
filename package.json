@@ -9,7 +9,7 @@
         "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
         "lint": "eslint . src config || true",
         "predeploy": "npm run build",
-        "deploy": "git add dist/ -f && git commit -m 'prod commit' && git subtree push --prefix dist origin prod"
+        "deploy": "git add dist/ -f && git commit -m 'prod commit' && git subtree push --force --prefix dist origin prod"
     },
     "devDependencies": {
         "@babel/core": "^7.15.5",
