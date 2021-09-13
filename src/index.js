@@ -1,2 +1,2 @@
-// Test import of styles
+// Import styles
 import '@/sass/index.scss';

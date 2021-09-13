@@ -5,6 +5,8 @@
     display: flex;
     min-height: 85vh;
     padding-top: 7.6rem;
+    background-image: url('images/alex.png');
+    background-size: cover;
 
     &__textbox {
         color: $color-light;
@@ -39,9 +41,11 @@
             line-height: 1.35;
             margin-bottom: map-get($sizes, 'sm');
             max-width: 70%;
+            text-shadow: 0 0 0.8rem $shade-07;
 
             @include breakpoint-min('tab-port') {
                 max-width: none;
+                text-shadow: none;
             }
         }
 

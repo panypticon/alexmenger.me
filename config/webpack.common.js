@@ -58,6 +58,7 @@ module.exports = {
     // Determine how modules within the project are treated
     module: {
         rules: [
+            { test: /\.html$/i, loader: 'html-loader' },
             // JavaScript: Use Babel to transpile JavaScript files
             { test: /\.js$/, use: ['babel-loader'] },
 
