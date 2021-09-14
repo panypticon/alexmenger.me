@@ -1,60 +1,92 @@
 @use '../abstracts/' as *;
 
-.hithere {
-    align-items: flex-end;
-    display: flex;
-    min-height: 85vh;
-    padding-top: 7.6rem;
-    background-image: url('images/alex.png');
-    background-size: cover;
+.row {
+    .hithere {
+        align-items: flex-end;
+        display: flex;
+        min-height: 90vh;
+        padding-top: 7.6rem;
+        padding-bottom: map-get($sizes, 'lg') * 2;
+        position: relative;
 
-    &__textbox {
-        color: $color-light;
+        @include breakpoint-min('desktop') {
+            min-height: 70vh;
+        }
 
-        @include breakpoint-min('tab-port') {
-            background-color: $color-light;
-            border-radius: map-get($sizes, 'sm');
-            box-shadow: 0 0 map-get($sizes, 'xs') $shade-02 inset;
-            color: $color-dark;
-            max-width: calc(50% - #{map-get($sizes, 'sm')});
-            padding: map-get($sizes, 'lg');
+        &__img {
+            background: right -47.5rem top 3rem / auto 115vh no-repeat url('images/alex.png');
+            bottom: 0;
+            left: 0;
+            mix-blend-mode: luminosity;
+            opacity: 0.5;
+            position: absolute;
+            right: 0;
+            top: 0;
 
             @media (prefers-color-scheme: dark) {
-                background-color: $color-dark;
-                box-shadow: 0 0 map-get($sizes, 'xs') $shade-09 inset;
-                color: $color-light;
+                opacity: 0.25;
+            }
+
+            @media (max-width: map-get($breakpoints, 'desktop')) and (orientation: landscape) {
+                background-position: right -12rem top 3rem;
+                background-size: contain;
+            }
+
+            @include breakpoint-min('desktop') {
+                background-position: right bottom;
+                background-size: auto 95%;
             }
         }
 
-        h1 {
-            font-size: 3.6rem;
-            margin-bottom: map-get($sizes, 'lg');
-            max-width: 70%;
+        &__textbox {
+            color: $color-light;
+            z-index: 10;
 
             @include breakpoint-min('tab-port') {
-                max-width: none;
+                background-color: $color-light;
+                border-radius: map-get($sizes, 'sm');
+                box-shadow: 0 0 map-get($sizes, 'xs') $shade-02 inset;
+                color: $color-dark;
+                max-width: calc(50% - #{map-get($sizes, 'sm')});
+                padding: map-get($sizes, 'lg');
+
+                @media (prefers-color-scheme: dark) {
+                    background-color: $color-dark;
+                    box-shadow: 0 0 map-get($sizes, 'xs') $shade-09 inset;
+                    color: $color-light;
+                }
             }
-        }
 
-        p {
-            font-size: 2rem;
-            line-height: 1.35;
-            margin-bottom: map-get($sizes, 'sm');
-            max-width: 70%;
-            text-shadow: 0 0 0.8rem $shade-07;
+            h1 {
+                font-size: 3.6rem;
+                margin-bottom: map-get($sizes, 'lg');
+                max-width: 70%;
 
-            @include breakpoint-min('tab-port') {
-                max-width: none;
-                text-shadow: none;
+                @include breakpoint-min('tab-port') {
+                    max-width: none;
+                }
             }
-        }
 
-        button {
-            margin-top: map-get($sizes, 'lg');
-            width: 100%;
+            p {
+                font-size: 2rem;
+                line-height: 1.35;
+                margin-bottom: map-get($sizes, 'sm');
+                max-width: 70%;
+                text-shadow: 0 0 0.8rem $shade-07;
 
-            @include breakpoint-min('tab-port') {
-                width: auto;
+                @include breakpoint-min('tab-port') {
+                    max-width: none;
+                    text-shadow: none;
+                }
+            }
+
+            button {
+                margin-top: map-get($sizes, 'lg');
+                width: 100%;
+
+                @include breakpoint-min('tab-port') {
+                    width: auto;
+                }
             }
         }
     }

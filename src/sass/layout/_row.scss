@@ -3,6 +3,11 @@
 .row {
     &.bg-gradient {
         background: $gradient-secondary;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - map-get($sizes, 'lg')), 0 100%);
+
+        @include breakpoint-min('desktop') {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - map-get($sizes, 'lg') * 1.5), 0 100%);
+        }
 
         @media (prefers-color-scheme: dark) {
             background: $gradient-tertiary;
