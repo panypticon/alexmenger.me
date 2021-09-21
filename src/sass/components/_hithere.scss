@@ -9,8 +9,13 @@
         padding-bottom: map-get($sizes, 'lg') * 2;
         position: relative;
 
-        @include breakpoint-min('desktop') {
-            min-height: 70vh;
+        @include breakpoint-min('tab-port') {
+            min-height: 75vh;
+            padding-top: 11.8rem;
+        }
+
+        @include breakpoint-min('tab-land') {
+            min-height: 95vh;
         }
 
         &__img {
@@ -25,6 +30,11 @@
 
             @media (prefers-color-scheme: dark) {
                 opacity: 0.25;
+            }
+
+            @include breakpoint-min('tab-port') {
+                background-position: right -38rem top 3rem;
+                background-size: cover;
             }
 
             @media (max-width: map-get($breakpoints, 'desktop')) and (orientation: landscape) {
@@ -47,7 +57,7 @@
                 border-radius: map-get($sizes, 'sm');
                 box-shadow: 0 0 map-get($sizes, 'xs') $shade-02 inset;
                 color: $color-dark;
-                max-width: calc(50% - #{map-get($sizes, 'sm')});
+                max-width: 50%;
                 padding: map-get($sizes, 'lg');
 
                 @media (prefers-color-scheme: dark) {
