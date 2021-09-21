@@ -12,7 +12,6 @@
         color: $color-light;
         display: flex;
         height: 6rem;
-        justify-content: space-between;
         margin: auto;
         max-width: $max-width;
         position: relative;
@@ -21,6 +20,28 @@
 
         @media (prefers-color-scheme: dark) {
             color: $color-dark;
+        }
+
+        @include breakpoint-min('tab-port') {
+            height: auto;
+            margin: map-get($sizes, 'lg') auto;
+
+            @media (prefers-color-scheme: dark) {
+                border-color: $color-dark;
+            }
+        }
+    }
+
+    &__border {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+
+        @include breakpoint-min('tab-port') {
+            border: 0.1rem solid $color-light;
+            border-radius: map-get($sizes, 'sm');
+            padding: map-get($sizes, 'sm') map-get($sizes, 'lg');
         }
     }
 
@@ -42,42 +63,145 @@
     }
 
     &__icon {
-        background-color: red;
+        cursor: pointer;
         display: flex;
         flex-direction: column;
-        height: 3.2rem;
+        height: 2.4rem;
         justify-content: space-between;
+        position: relative;
         width: 3.2rem;
+
+        @include breakpoint-min('tab-port') {
+            display: none;
+        }
 
         &-elem {
             background-color: $color-primary;
+            display: block;
             height: 0.2rem;
+            left: 0;
+            position: absolute;
+            transition: 0.25s ease-in-out;
             width: 100%;
-        }
 
-        &-top {
-            transform: translateY(0.5rem);
-        }
+            &:nth-child(1) {
+                top: 0;
+            }
 
-        &-bot {
-            transform: translateY(-0.5rem);
+            &:nth-child(2),
+            &:nth-child(3) {
+                top: 1.2rem;
+            }
+
+            &:nth-child(4) {
+                top: 2.3rem;
+            }
         }
 
         &--close {
-            .nav__icon-top {
-                // transform: rotate(38deg) scaleX(1) translate(0.7rem, 0.2rem);
-                // transform-origin: top left;
+            z-index: 10;
+            display: block;
+
+            span:nth-child(1) {
+                top: 1.2rem;
+                width: 0;
+                left: 50%;
             }
 
-            .nav__icon-bot {
-                // transform: rotate(-45deg) scaleX(1.325) translate(0.1rem, 0.1rem);
-                // transform-origin: bottom left;
+            span:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+
+            span:nth-child(4) {
+                top: 1.2rem;
+                width: 0;
+                left: 50%;
+            }
+
+            + .nav__list {
+                align-items: center;
+                background: $gradient-secondary;
+                display: flex;
+                flex-flow: column nowrap;
+                font-size: 2.2rem;
+                height: 100vh;
+                justify-content: center;
+                left: 0;
+                overflow: hidden;
+                position: absolute;
+                padding: map-get($sizes, 'sm');
+                right: 0;
+                top: 0;
+
+                li {
+                    margin-left: 0;
+
+                    &:last-child,
+                    &:nth-last-child(2) {
+                        margin-left: 0;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: map-get($sizes, 'lg') * 1.5;
+                    }
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    background: $gradient-tertiary;
+                }
             }
         }
     }
 
     &__list {
+        color: $color-primary;
         display: none;
-        position: absolute;
+        font-size: 1.8rem;
+        font-weight: 600;
+        list-style: none;
+        text-transform: uppercase;
+
+        @include breakpoint-min('tab-port') {
+            display: flex;
+        }
+
+        li {
+            align-items: center;
+            display: flex;
+            margin-left: map-get($sizes, 'lg');
+
+            &:last-child,
+            &:nth-last-child(2) {
+                margin-left: map-get($sizes, 'sm');
+            }
+        }
+
+        a {
+            &:link,
+            &:visited,
+            &:hover,
+            &:active {
+                align-items: center;
+                color: inherit;
+                display: flex;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__linkedin {
+        height: 1.6rem;
+    }
+
+    &__github {
+        height: 1.7rem;
+    }
+
+    &__twitter {
+        height: 1.8rem;
     }
 }
