@@ -132,7 +132,7 @@
 
                 li {
                     margin-left: 0;
-                    animation: fade-in-up 0.5s ease-out;
+                    animation: fade-in-up 0.35s ease-out;
 
                     &:not(:last-child) {
                         margin-bottom: map-get($sizes, 'lg') * 1.5;
@@ -164,10 +164,13 @@
         li {
             align-items: center;
             display: flex;
-            margin-left: map-get($sizes, 'lg');
+            margin-left: map-get($sizes, 'lg') - 0.3rem * 2;
         }
 
         a {
+            padding: 0.3rem;
+            transition: translateY 0.2s ease-in;
+
             &:link,
             &:visited,
             &:hover,
@@ -176,6 +179,13 @@
                 color: inherit;
                 display: flex;
                 text-decoration: none;
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    transform: translateY(-0.1rem);
+                    color: $color-primary;
+                }
             }
         }
     }
