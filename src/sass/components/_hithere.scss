@@ -23,13 +23,13 @@
             bottom: 0;
             left: 0;
             mix-blend-mode: luminosity;
-            opacity: 0.5;
+            opacity: 0.65;
             position: absolute;
             right: 0;
             top: 0;
 
             @media (prefers-color-scheme: dark) {
-                opacity: 0.25;
+                opacity: 0.5;
             }
 
             @include breakpoint-min('tab-port') {
