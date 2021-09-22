@@ -6,7 +6,6 @@
         display: flex;
         min-height: 90vh;
         padding-top: 9.2rem;
-        padding-bottom: map-get($sizes, 'lg') * 2;
         position: relative;
 
         @include breakpoint-min('tab-port') {
