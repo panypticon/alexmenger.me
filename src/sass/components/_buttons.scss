@@ -9,7 +9,7 @@
     font-weight: 800;
     padding: map-get($sizes, 'sm') map-get($sizes, 'lg');
     text-transform: uppercase;
-    transition: all 0.1s ease-in;
+    transition: translateY 0.1s ease-in;
 
     &:hover {
         transform: translateY(-0.1rem);
