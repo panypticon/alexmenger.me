@@ -5,7 +5,7 @@
         align-items: flex-end;
         display: flex;
         min-height: 90vh;
-        padding-top: 7.6rem;
+        padding-top: 9.2rem;
         padding-bottom: map-get($sizes, 'lg') * 2;
         position: relative;
 
@@ -15,7 +15,7 @@
         }
 
         @include breakpoint-min('tab-land') {
-            min-height: 95vh;
+            min-height: 90vh;
         }
 
         &__img {
@@ -51,6 +51,7 @@
         &__textbox {
             color: $color-light;
             z-index: 10;
+            animation: fade-in-up 0.5s ease-out forwards;
 
             @include breakpoint-min('tab-port') {
                 background-color: $color-light;
