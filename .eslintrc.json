@@ -27,7 +27,7 @@
         "no-self-compare": 1,
         "import/prefer-default-export": 0,
         "func-names": [1, "as-needed"],
-        "arrow-body-style": 1,
+        "arrow-body-style": [1, "as-needed"],
         "semi": [1, "always"],
         "import/no-extraneous-dependencies": ["off", { "devDependencies": false }]
     },
