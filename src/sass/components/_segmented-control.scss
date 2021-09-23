@@ -1,0 +1,55 @@
+@use '../abstracts' as *;
+
+.segmented-control {
+    display: flex;
+    justify-content: center;
+    margin: map-get($sizes, 'sm') 0;
+    position: relative;
+
+    @include ui-font-style;
+
+    &__item {
+        background-color: $shade-01;
+        display: flex;
+        flex-basis: 25%;
+
+        &:first-of-type {
+            border-radius: 3rem 0 0 3rem;
+        }
+        &:last-of-type {
+            border-radius: 0 3rem 3rem 0;
+        }
+    }
+
+    &__indicator {
+        background-color: $color-primary;
+        color: transparent;
+        padding: $ui-padding;
+        position: absolute;
+        top: 0;
+        width: 25%;
+        transition: all 0.3s ease-in;
+
+        &--left {
+            left: 25%;
+            border-radius: 3rem 0 0 3rem;
+        }
+
+        &--right {
+            left: 50%;
+            border-radius: 0 3rem 3rem 0;
+        }
+    }
+
+    input[type='radio'] {
+        display: none;
+
+        + label {
+            cursor: pointer;
+            flex: 1;
+            padding: $ui-padding;
+            text-align: center;
+            z-index: 10;
+        }
+    }
+}
