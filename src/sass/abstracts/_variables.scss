@@ -42,3 +42,5 @@ $sizes: (
 );
 
 $max-width: 125rem;
+
+$ui-padding: map-get($sizes, 'sm') map-get($sizes, 'lg');
