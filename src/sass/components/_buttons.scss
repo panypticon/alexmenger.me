@@ -3,28 +3,32 @@
 .btn {
     border: 0;
     border-radius: 3rem;
-    color: $color-dark;
     cursor: pointer;
-    font-size: 1.8rem;
-    font-weight: 800;
-    padding: map-get($sizes, 'sm') map-get($sizes, 'lg');
-    text-transform: uppercase;
-    transition: translateY 0.1s ease-in;
+    padding: $ui-padding;
+    transition: translateY 0.2s ease-in;
 
-    &:hover {
-        transform: translateY(-0.1rem);
-    }
+    @include ui-font-style;
 
     &:active {
-        transform: translateY(0);
+        transform: translateY(0.1rem);
     }
 
     &--primary {
-        background-color: $color-primary;
+        // background-color: $color-primary;
+        background: linear-gradient(
+                105deg,
+                $color-primary 0%,
+                $color-primary 50%,
+                $color-primary-dark 50%,
+                $color-primary-dark 100%
+            )
+            left / 202%;
+        transition: background-position 0.15s ease-in-out;
+
         box-shadow: 0 0 0.5rem $color-primary-light;
 
         &:hover {
-            background-color: $color-primary-dark;
+            background-position: right;
             box-shadow: 0 0 0.5rem $color-primary;
         }
     }
