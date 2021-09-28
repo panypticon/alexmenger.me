@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.querySelector('.nav__icon');
     const whatIDoSegmented = document.querySelector('.whatido .segmented-control');
     const whatIDoSegmentedIndicator = whatIDoSegmented.querySelector('.segmented-control__indicator');
+    const whatIDoUX = document.querySelector('.whatido .cardview--ux');
+    const whatIDoCode = document.querySelector('.whatido .cardview--code');
 
     // Functions
     const handleSegmentedChange = evt => {
@@ -14,6 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
         whatIDoSegmentedIndicator.classList.remove(
             `segmented-control__indicator--${location === 'left' ? 'right' : 'left'}`
         );
+
+        if (location === 'left') {
+            whatIDoUX.classList.remove('hidden');
+            whatIDoCode.classList.add('hidden');
+        } else if (location === 'right') {
+            whatIDoUX.classList.add('hidden');
+            whatIDoCode.classList.remove('hidden');
+        }
     };
 
     // Event Listeners

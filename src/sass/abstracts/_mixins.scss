@@ -19,10 +19,10 @@ $breakpoints: (
 // Default paddings, responsive
 
 @mixin padding-default {
-    padding: map-get($sizes, 'sm');
+    padding: map-get($sizes, 'lg') map-get($sizes, 'sm');
 
     @include breakpoint-min('tab-port') {
-        padding: map-get($sizes, 'lg');
+        padding: map-get($sizes, 'xl') map-get($sizes, 'lg');
     }
 }
 

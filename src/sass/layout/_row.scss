@@ -2,7 +2,7 @@
 
 .row {
     &.bg-gradient {
-        background: $gradient-secondary;
+        background-image: $gradient-secondary;
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - map-get($sizes, 'lg')), 0 100%);
 
         @include breakpoint-min('tab-port') {
@@ -10,7 +10,7 @@
         }
 
         @media (prefers-color-scheme: dark) {
-            background: $gradient-tertiary;
+            background-image: $gradient-tertiary;
         }
 
         section {

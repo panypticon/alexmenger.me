@@ -23,9 +23,9 @@
                 $color-primary-dark 100%
             )
             left / 202%;
-        transition: background-position 0.15s ease-in-out;
+        transition: background-position 0.2s ease-in-out;
 
-        box-shadow: 0 0 0.5rem $color-primary-light;
+        box-shadow: 0 0 0.5rem $color-primary;
 
         &:hover {
             background-position: right;
