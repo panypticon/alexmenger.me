@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
 
+.cardview {
+    perspective: 100rem;
+}
+
 .card {
     background: $gradient-secondary;
     border-radius: map-get($sizes, 'sm');
@@ -15,17 +19,46 @@
     position: relative;
     text-align: center;
     transition: all 0.2s ease-out;
+    transform-style: preserve-3d;
 
-    &:hover {
-        box-shadow: -0.25rem 0.5rem 1rem $color-secondary-light;
-        transform: rotate3d(-1, -1, 0, 10deg);
-        @media (prefers-color-scheme: dark) {
-            box-shadow: -0.25rem 0.5rem 1rem $shade-09;
+    @media (hover: hover) {
+        &:hover {
+            .btn--primary {
+                background-position: left;
+                box-shadow: 0 0 0.5rem $color-primary;
+            }
         }
 
-        .btn--primary {
-            background-position: right;
-            box-shadow: 0 0 0.5rem $color-primary;
+        &.bottom-right:hover {
+            box-shadow: -0.2rem -0.2rem 1rem $color-secondary-light;
+            transform: rotateX(-1deg) rotateY(1deg);
+            @media (prefers-color-scheme: dark) {
+                box-shadow: -0.2rem -0.2rem 1rem $shade-09;
+            }
+        }
+
+        &.bottom-left:hover {
+            box-shadow: 0.2rem -0.2rem 1rem $color-secondary-light;
+            transform: rotateX(-1deg) rotateY(-1deg);
+            @media (prefers-color-scheme: dark) {
+                box-shadow: 0.2rem -0.2rem 1rem $shade-09;
+            }
+        }
+
+        &.top-left:hover {
+            box-shadow: 0.2rem 0.2rem 1rem $color-secondary-light;
+            transform: rotateX(1deg) rotateY(-1deg);
+            @media (prefers-color-scheme: dark) {
+                box-shadow: 0.2rem 0.2rem 1rem $shade-09;
+            }
+        }
+
+        &.top-right:hover {
+            box-shadow: -0.25rem 0.25rem 1rem $color-secondary-light;
+            transform: rotateX(1deg) rotateY(1deg);
+            @media (prefers-color-scheme: dark) {
+                box-shadow: -0.25rem 0.25rem 1rem $shade-09;
+            }
         }
     }
 

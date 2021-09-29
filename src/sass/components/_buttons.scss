@@ -5,7 +5,7 @@
     border-radius: 3rem;
     cursor: pointer;
     padding: $ui-padding;
-    transition: translateY 0.2s ease-in;
+    transition: translateY 0.1s ease-out;
 
     @include ui-font-style;
 
@@ -17,18 +17,19 @@
         // background-color: $color-primary;
         background: linear-gradient(
                 105deg,
-                $color-primary 0%,
-                $color-primary 50%,
+                $color-primary-dark 0%,
                 $color-primary-dark 50%,
-                $color-primary-dark 100%
+                $color-primary 50%,
+                $color-primary 100%
             )
             left / 202%;
+        background-position: right;
         transition: background-position 0.2s ease-in-out;
 
         box-shadow: 0 0 0.5rem $color-primary;
 
         &:hover {
-            background-position: right;
+            background-position: left;
             box-shadow: 0 0 0.5rem $color-primary;
         }
     }
