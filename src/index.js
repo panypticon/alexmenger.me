@@ -1,7 +1,5 @@
-import throttle from 'lodash/throttle';
-
 import SegmentedControl from './scripts/segmented-control';
-import handleCardMouseMove from './scripts/card';
+import Card from './scripts/card';
 
 import '@/sass/index.scss';
 
@@ -16,5 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event Listeners and Initialization
     menuIcon.addEventListener('click', () => menuIcon.classList.toggle('nav__icon--close'));
     whatIDoSegmented && whatIDoUX && whatIDoCode && new SegmentedControl(whatIDoSegmented, whatIDoUX, whatIDoCode);
-    whatIDoUXCards.forEach(card => card.addEventListener('mousemove', throttle(handleCardMouseMove, 250)));
+    whatIDoUXCards.forEach(card => new Card(card));
 });

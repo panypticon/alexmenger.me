@@ -15,8 +15,10 @@
     display: flex;
     flex-direction: column;
     font-size: 1.8rem;
+    opacity: 0.4;
     overflow: hidden;
     position: relative;
+    top: map-get($sizes, 'sm');
     text-align: center;
     transition: all 0.2s ease-out;
     transform-style: preserve-3d;
@@ -55,7 +57,7 @@
 
         &.top-right:hover {
             box-shadow: -0.25rem 0.25rem 1rem $color-secondary-light;
-            transform: rotateX(1deg) rotateY(1deg);
+            transform: translateY(0rem) rotateX(1deg) rotateY(1deg) !important;
             @media (prefers-color-scheme: dark) {
                 box-shadow: -0.25rem 0.25rem 1rem $shade-09;
             }
