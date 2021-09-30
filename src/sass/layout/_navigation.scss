@@ -177,7 +177,7 @@
 
             li {
                 margin-left: 0;
-                animation: fade-in-up 0.35s ease-out;
+                animation: fade-in-up 0.35s ease-out backwards;
 
                 &:not(:last-child) {
                     margin-bottom: map-get($sizes, 'lg') * 1.5;
