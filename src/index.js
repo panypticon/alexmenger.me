@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.querySelector('.nav__icon');
     const whatIDoSegmented = document.querySelector('.whatido .segmented-control');
     const whatIDoUX = document.querySelector('.whatido .cardview--ux');
-    const whatIDoCode = document.querySelector('.whatido .cardview--code');
+    const whatIDoCode = document.querySelector('.whatido .view-code');
     const whatIDoUXCards = whatIDoUX.querySelectorAll('.card');
 
     // Event Listeners and Initialization

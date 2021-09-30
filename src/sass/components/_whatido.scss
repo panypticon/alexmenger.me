@@ -2,7 +2,6 @@
 
 .whatido {
     .cardview {
-        animation: fade-in 1s;
         display: grid;
         grid-template-columns: 1fr;
         grid-auto-rows: minmax(36rem, 1fr);
@@ -12,10 +11,6 @@
         @include breakpoint-min('tab-port') {
             gap: map-get($sizes, 'lg');
             grid-template-columns: 1fr 1fr;
-        }
-
-        &--code {
-            background-color: rebeccapurple;
         }
     }
 
