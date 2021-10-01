@@ -5,11 +5,10 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-auto-rows: minmax(36rem, 1fr);
-        gap: map-get($sizes, 'sm');
+        gap: map-get($sizes, 'lg');
         list-style: none;
 
         @include breakpoint-min('tab-port') {
-            gap: map-get($sizes, 'lg');
             grid-template-columns: 1fr 1fr;
         }
     }

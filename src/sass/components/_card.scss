@@ -18,12 +18,15 @@
     opacity: 0.4;
     overflow: hidden;
     position: relative;
-    top: map-get($sizes, 'sm');
+    transform: translateY(map-get($sizes, 'sm'));
     text-align: center;
     transition: all 0.2s ease-out;
     transform-style: preserve-3d;
 
     @media (hover: hover) {
+        transform: none;
+        top: map-get($sizes, 'sm');
+
         &:hover {
             .btn--primary {
                 background-position: left;
