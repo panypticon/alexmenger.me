@@ -17,6 +17,10 @@
             min-height: 90vh;
         }
 
+        @media (max-aspect-ratio: 10/22) {
+            min-height: 70vh;
+        }
+
         &__img {
             background: right -47.5rem top 3rem / auto 115vh no-repeat url('images/alex.png');
             bottom: 0;
@@ -44,6 +48,10 @@
             @include breakpoint-min('desktop') {
                 background-position: right bottom;
                 background-size: auto 95%;
+            }
+
+            @media (max-aspect-ratio: 10/22) {
+                background-size: cover;
             }
         }
 
