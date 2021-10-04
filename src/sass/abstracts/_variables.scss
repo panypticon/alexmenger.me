@@ -45,3 +45,11 @@ $sizes: (
 $max-width: 125rem;
 
 $ui-padding: map-get($sizes, 'sm') map-get($sizes, 'lg');
+
+//////////////////////////////////////////////////
+// Responsive Breakpoints
+$breakpoints: (
+    'tab-port': 48em,
+    'tab-land': 64em,
+    'desktop': 78.125em
+);
