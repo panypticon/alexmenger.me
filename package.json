@@ -50,6 +50,7 @@
         "url": "git@github.com:AlexDCI/alexmenger.me"
     },
     "dependencies": {
+        "highlight.js": "^11.2.0",
         "lodash": "^4.17.21"
     }
 }

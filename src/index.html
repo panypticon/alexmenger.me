@@ -66,8 +66,8 @@
                             <label for="code">Code</label>
                         </span>
                     </div>
-                    <div class="cardviews-container">
-                        <ul class="cardview cardview--ux">
+                    <div class="views-container">
+                        <ul class="cardview">
                             <li class="card card--dci">
                                 <img class="card__background" src="images/what_dci.jpg" alt="background image" />
                                 <div class="card__btn-container">
@@ -109,25 +109,187 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="view-code hidden">
-                            <section class="view-code__frontend">
+                        <div class="codeview hidden">
+                            <section class="codeview__frontend">
                                 <h3>Frontend</h3>
+                                <ul class="codeview__list">
+                                    <li>I write modern, scalable <em>HTML</em> and <em>CSS</em> (Sass rocks)</li>
+                                    <li>
+                                        I can handle <em>Web APIs</em> using up-to-date <em>JavaScript</em> (
+                                        <pre><code
+                                            >`ES${new Date().getFullYear()}`</code
+                                        ></pre>
+                                        )
+                                    </li>
+                                    <li>I'm fluent in functional <em>React</em> and its ecosystem (Hooks, baby)</li>
+                                </ul>
                             </section>
-                            <section class="view-code__backend">
+                            <section class="codeview__backend">
                                 <h3>Backend</h3>
+                                <ul class="codeview__list">
+                                    <li>
+                                        I write RESTful server logic using <em>Node</em>, <em>Express</em>, and
+                                        <em>Mongoose</em> (my frontends need someone to talk to)
+                                    </li>
+                                    <li>
+                                        I know my way around <em>PHP</em> and entourage as well (even though I prefer
+                                        JS)
+                                    </li>
+                                </ul>
                             </section>
-                            <section class="view-code__projects">
-                                <div class="view-code__projects-separator">
-                                    <h4>Sample Projects</h4>
-                                    <p>GH</p>
+                            <section class="codeview__projects">
+                                <div class="codeview__projects-separator">
+                                    <h3>
+                                        Sample Projects
+                                        <a href="https://github.com/AlexDCI" target="_blank"
+                                            ><i class="bi bi-github"></i
+                                        ></a>
+                                    </h3>
                                 </div>
-                                <ul class="view-code__projects-container">
-                                    <li class="view-code__card">
-                                        <h5>Personal Portfolio</h5>
-                                        <img src="#" alt="#" />
-                                        <p>Lorem</p>
-                                        <p>Demo</p>
-                                        <p>Code</p>
+                                <ul class="codeview__projects-container">
+                                    <li class="codeview__card">
+                                        <h4>Personal Portfolio</h4>
+                                        <div class="card__content">
+                                            <img src="https://picsum.photos/seed/1/200" alt="Project image" />
+                                            <div class="card__description">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+                                                    magnam.
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__demo"
+                                                            ><i class="bi bi-arrow-right"></i>Demo</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__code"
+                                                            ><i class="bi bi-github"></i>Code</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="codeview__card">
+                                        <h4>Personal Portfolio</h4>
+                                        <div class="card__content">
+                                            <img src="https://picsum.photos/seed/2/200" alt="Project image" />
+                                            <div class="card__description">
+                                                <p>
+                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                    Voluptatibus, incidunt.
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__demo"
+                                                            ><i class="bi bi-arrow-right"></i>Demo</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__code"
+                                                            ><i class="bi bi-github"></i>Code</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="codeview__card">
+                                        <h4>Personal Portfolio</h4>
+                                        <div class="card__content">
+                                            <img src="https://picsum.photos/seed/3/200" alt="Project image" />
+                                            <div class="card__description">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                    Blanditiis, ipsa.
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__demo"
+                                                            ><i class="bi bi-arrow-right"></i>Demo</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__code"
+                                                            ><i class="bi bi-github"></i>Code</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="codeview__card">
+                                        <h4>Personal Portfolio</h4>
+                                        <div class="card__content">
+                                            <img src="https://picsum.photos/seed/4/200" alt="Project image" />
+                                            <div class="card__description">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                                    Consequatur, vitae.
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__demo"
+                                                            ><i class="bi bi-arrow-right"></i>Demo</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__code"
+                                                            ><i class="bi bi-github"></i>Code</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="codeview__card">
+                                        <h4>Personal Portfolio</h4>
+                                        <div class="card__content">
+                                            <img src="https://picsum.photos/seed/5/200" alt="Project image" />
+                                            <div class="card__description">
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa,
+                                                    expedita?
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__demo"
+                                                            ><i class="bi bi-arrow-right"></i>Demo</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__code"
+                                                            ><i class="bi bi-github"></i>Code</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="codeview__card">
+                                        <h4>Personal Portfolio</h4>
+                                        <div class="card__content">
+                                            <img src="https://picsum.photos/seed/6/200" alt="Project image" />
+                                            <div class="card__description">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus,
+                                                    quidem.
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__demo"
+                                                            ><i class="bi bi-arrow-right"></i>Demo</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" target="_blank" class="card__code"
+                                                            ><i class="bi bi-github"></i>Code</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </section>

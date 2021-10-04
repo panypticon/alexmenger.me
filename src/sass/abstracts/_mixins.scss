@@ -26,6 +26,13 @@
     }
 }
 
+@mixin padding-inline {
+    padding: map-get($sizes, 'sm');
+    @include breakpoint-min('tab-port') {
+        padding: map-get($sizes, 'sm') map-get($sizes, 'lg');
+    }
+}
+
 // Default UI font style
 
 @mixin ui-font-style {

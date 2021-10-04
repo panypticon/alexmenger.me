@@ -8,7 +8,7 @@
 
     @include ui-font-style;
 
-    @include breakpoint-min('tab-port') {
+    @include breakpoint-min('tab-land') {
         margin: map-get($sizes, 'xl') 0;
     }
 

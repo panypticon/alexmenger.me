@@ -59,4 +59,221 @@
             }
         }
     }
+
+    .codeview {
+        animation: fade-in-up 0.3s ease-out both;
+        background: linear-gradient(180deg, $color-secondary 0%, $color-secondary 2rem, transparent 2rem);
+        border: 0.2rem solid $color-secondary;
+        border-radius: map-get($sizes, 'sm');
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        transform: translateZ(0); /* Hack to make overflow work in Safari */
+        position: relative;
+
+        @include breakpoint-min('tab-port') {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            background: linear-gradient(180deg, $color-tertiary 0%, $color-tertiary 2rem, transparent 2rem);
+            border: 0.2rem solid $color-tertiary;
+        }
+
+        h3 {
+            background-color: $color-secondary;
+            margin-bottom: 0;
+            text-align: center;
+
+            @include padding-inline;
+
+            @include breakpoint-min('tab-port') {
+                text-align: left;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                background-color: $color-tertiary;
+            }
+        }
+
+        ul {
+            line-height: 1.35;
+            list-style: none;
+            padding: map-get($sizes, 'sm') map-get($sizes, 'sm') map-get($sizes, 'lg');
+
+            @include breakpoint-min('tab-port') {
+                padding: map-get($sizes, 'lg');
+            }
+        }
+
+        &__list {
+            li {
+                padding-left: 3.4rem;
+                position: relative;
+
+                &:not(:last-child) {
+                    margin-bottom: map-get($sizes, 'sm');
+                }
+
+                &::before {
+                    color: $color-primary;
+                    content: '{}';
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                    left: 0;
+                    position: absolute;
+                    top: -0.3rem;
+                }
+            }
+
+            em {
+                color: $color-secondary;
+                font-weight: 600;
+                font-style: normal;
+
+                @media (prefers-color-scheme: dark) {
+                    color: $color-tertiary;
+                }
+            }
+
+            pre {
+                display: inline;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 1.7rem;
+                line-height: inherit;
+                white-space: pre-wrap;
+            }
+
+            code {
+                border-radius: 0.4rem;
+                padding: 0.2rem;
+                display: inline;
+            }
+        }
+
+        &__backend {
+            h3 {
+                transform: rotateY(180deg);
+            }
+
+            @include breakpoint-min('tab-port') {
+                border-left: 0.1rem solid $color-secondary;
+
+                @media (prefers-color-scheme: dark) {
+                    border-left-color: $color-tertiary;
+                }
+            }
+        }
+
+        &__frontend {
+            @include breakpoint-min('tab-port') {
+                border-right: 0.1rem solid $color-secondary;
+
+                @media (prefers-color-scheme: dark) {
+                    border-right-color: $color-tertiary;
+                }
+            }
+        }
+
+        &__projects {
+            grid-column: 1 / -1;
+
+            h3 {
+                align-items: center;
+                display: flex;
+                font-size: 2.4rem;
+                justify-content: center;
+
+                @include breakpoint-min('tab-port') {
+                    justify-content: space-between;
+                }
+
+                a:link,
+                a:visited,
+                a:hover,
+                a:active {
+                    color: $color-primary;
+                    margin-left: map-get($sizes, 'lg');
+                }
+            }
+
+            h4 {
+                margin-bottom: map-get($sizes, 'xs');
+            }
+
+            &-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: map-get($sizes, 'lg') map-get($sizes, 'xl');
+
+                @include breakpoint-min('tab-port') {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+
+        &__card {
+            img {
+                border-radius: map-get($sizes, 'sm');
+                height: 8rem;
+                object-fit: cover;
+                object-position: center;
+                width: 8rem;
+
+                @include breakpoint-min('tab-port') {
+                    height: 10.2rem;
+                    width: 10.2rem;
+                }
+            }
+
+            ul {
+                padding: 0;
+                display: flex;
+            }
+
+            .card__content {
+                display: flex;
+                gap: map-get($sizes, 'sm');
+            }
+
+            .card__description {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                ul {
+                    margin-top: map-get($sizes, 'xs');
+                }
+
+                a {
+                    transition: translateY 0.2s ease-in;
+                    display: inline-block;
+
+                    &:link,
+                    &:visited,
+                    &:hover,
+                    &:active {
+                        color: inherit;
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+
+                    @media (hover: hover) {
+                        &:hover {
+                            transform: translateY(-0.1rem);
+                        }
+                    }
+                }
+
+                i {
+                    display: inline-block;
+                    margin-right: map-get($sizes, 'xs');
+                }
+            }
+
+            .card__demo {
+                margin-right: map-get($sizes, 'lg');
+            }
+        }
+    }
 }
