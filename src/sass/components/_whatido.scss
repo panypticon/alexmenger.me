@@ -62,8 +62,8 @@
 
     .codeview {
         animation: fade-in-up 0.3s ease-out both;
-        background: linear-gradient(180deg, $color-secondary 0%, $color-secondary 2rem, transparent 2rem);
-        border: 0.2rem solid $color-secondary;
+        background: linear-gradient(180deg, var(--color-active) 0%, var(--color-active) 2rem, transparent 2rem);
+        border: 0.2rem solid var(--color-active);
         border-radius: map-get($sizes, 'sm');
         display: grid;
         grid-template-columns: 1fr;
@@ -75,13 +75,8 @@
             grid-template-columns: 1fr 1fr;
         }
 
-        @media (prefers-color-scheme: dark) {
-            background: linear-gradient(180deg, $color-tertiary 0%, $color-tertiary 2rem, transparent 2rem);
-            border: 0.2rem solid $color-tertiary;
-        }
-
         h3 {
-            background-color: $color-secondary;
+            background-color: var(--color-active);
             margin-bottom: 0;
             text-align: center;
 
@@ -89,10 +84,6 @@
 
             @include breakpoint-min('tab-port') {
                 text-align: left;
-            }
-
-            @media (prefers-color-scheme: dark) {
-                background-color: $color-tertiary;
             }
         }
 
@@ -127,13 +118,9 @@
             }
 
             em {
-                color: $color-secondary;
+                color: var(--color-active);
                 font-weight: 600;
                 font-style: normal;
-
-                @media (prefers-color-scheme: dark) {
-                    color: $color-tertiary;
-                }
             }
 
             pre {
@@ -157,21 +144,13 @@
             }
 
             @include breakpoint-min('tab-port') {
-                border-left: 0.1rem solid $color-secondary;
-
-                @media (prefers-color-scheme: dark) {
-                    border-left-color: $color-tertiary;
-                }
+                border-left: 0.1rem solid var(--color-active);
             }
         }
 
         &__frontend {
             @include breakpoint-min('tab-port') {
-                border-right: 0.1rem solid $color-secondary;
-
-                @media (prefers-color-scheme: dark) {
-                    border-right-color: $color-tertiary;
-                }
+                border-right: 0.1rem solid var(--color-active);
             }
         }
 

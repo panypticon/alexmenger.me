@@ -2,12 +2,22 @@
 
 @import '/node_modules/highlight.js/styles/stackoverflow-light.css';
 
-body {
-    background-color: $color-light;
+:root {
+    --background-active: #{$color-light};
+    --contrast-active: #{$color-dark};
+    --color-active: #{$color-secondary};
+    --gradient-active: #{$gradient-secondary};
 
     @media (prefers-color-scheme: dark) {
-        background-color: $color-dark;
+        --background-active: #{$color-dark};
+        --contrast-active: #{$color-light};
+        --color-active: #{$color-tertiary};
+        --gradient-active: #{$gradient-tertiary};
     }
+}
+
+body {
+    background-color: var(--background-active);
 }
 
 .hidden {

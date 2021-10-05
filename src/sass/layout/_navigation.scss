@@ -21,10 +21,6 @@
         @include breakpoint-min('tab-port') {
             height: auto;
             margin: map-get($sizes, 'lg') auto;
-
-            @media (prefers-color-scheme: dark) {
-                border-color: $color-dark;
-            }
         }
     }
 
@@ -35,13 +31,9 @@
         justify-content: space-between;
 
         @include breakpoint-min('tab-port') {
-            border: 0.2rem solid $color-light;
+            border: 0.2rem solid var(--background-active);
             border-radius: map-get($sizes, 'sm');
             padding: map-get($sizes, 'sm') map-get($sizes, 'lg');
-
-            @media (prefers-color-scheme: dark) {
-                border-color: $color-dark;
-            }
         }
     }
 
@@ -163,7 +155,7 @@
 
         @at-root .nav__icon--close + & {
             align-items: center;
-            background: $gradient-secondary;
+            background: var(--gradient-active);
             display: flex;
             flex-flow: column nowrap;
             font-size: 2.2rem;
@@ -183,10 +175,6 @@
                 &:not(:last-child) {
                     margin-bottom: map-get($sizes, 'lg') * 1.5;
                 }
-            }
-
-            @media (prefers-color-scheme: dark) {
-                background: $gradient-tertiary;
             }
         }
     }
