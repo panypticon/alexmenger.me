@@ -22,19 +22,21 @@
         flex: 1 1 100%;
         gap: map-get($sizes, 'lg');
         line-height: 1.7;
+        opacity: 0.4;
         text-align: center;
+        transform: translateY(map-get($sizes, 'sm'));
 
         img {
             border-radius: 50%;
             box-shadow: 0 0 map-get($sizes, 'xs') $shade-08;
             margin: 0 auto;
-            width: 85%;
+            width: 80%;
             transition: transform 0.15s ease-out;
         }
 
         @media (hover: hover) {
             &:hover img {
-                transform: scale(1.125) rotate(7deg);
+                transform: scale(1.15) rotate(7deg);
                 transform-origin: center;
             }
         }

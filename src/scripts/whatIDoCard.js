@@ -1,6 +1,6 @@
 import throttle from 'lodash/throttle';
 
-class Card {
+class WhatIDoCard {
     constructor(elem) {
         this.card = elem;
         this.handleCardMouseMove = this.handleCardMouseMove.bind(this);
@@ -40,4 +40,4 @@ class Card {
     }
 }
 
-export default Card;
+export default WhatIDoCard;

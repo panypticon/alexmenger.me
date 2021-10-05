@@ -41,3 +41,7 @@
         animation: fade-in-up-top 0.3s ease-out forwards;
     }
 }
+
+.fade-in-up {
+    animation: fade-in-up 0.3s ease-out both;
+}

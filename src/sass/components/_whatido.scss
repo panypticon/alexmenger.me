@@ -177,7 +177,8 @@
             }
 
             h4 {
-                margin-bottom: map-get($sizes, 'xs');
+                color: var(--color-active);
+                margin-bottom: map-get($sizes, 'sm');
             }
 
             &-container {
@@ -192,6 +193,18 @@
         }
 
         &__card {
+            &:not(:last-child) {
+                border-bottom: 0.2rem solid $color-primary;
+                padding-bottom: map-get($sizes, 'lg');
+            }
+
+            @include breakpoint-min('tab-port') {
+                &:nth-last-child(2) {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+            }
+
             img {
                 border-radius: map-get($sizes, 'sm');
                 height: 8rem;
