@@ -13,53 +13,6 @@
         }
     }
 
-    .card {
-        &--dci {
-            .card__background {
-                height: 250%;
-                left: -50%;
-                top: -50%;
-            }
-        }
-
-        &--shore {
-            .card__background {
-                height: 200%;
-                left: -45%;
-                top: -25%;
-
-                @include breakpoint-min('tab-land') {
-                    left: -30%;
-                }
-            }
-        }
-
-        &--tfw {
-            .card__background {
-                height: 220%;
-                left: -35%;
-                top: -80%;
-
-                @include breakpoint-min('tab-land') {
-                    left: -25%;
-                }
-            }
-        }
-
-        &--ch24 {
-            .card__background {
-                height: 180%;
-                left: -45%;
-                top: -35%;
-
-                @include breakpoint-min('tab-land') {
-                    top: -60%;
-                    left: -30%;
-                }
-            }
-        }
-    }
-
     .codeview {
         animation: fade-in-up 0.3s ease-out both;
         background: linear-gradient(180deg, var(--color-active) 0%, var(--color-active) 2rem, transparent 2rem);
