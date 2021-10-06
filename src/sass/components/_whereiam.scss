@@ -9,6 +9,10 @@
         gap: map-get($sizes, 'lg');
         margin-bottom: map-get($sizes, 'lg');
 
+        @include breakpoint-min('tab-port') {
+            flex-wrap: nowrap;
+        }
+
         @include breakpoint-min('tab-land') {
             margin-bottom: map-get($sizes, 'xl');
         }
@@ -18,9 +22,10 @@
         }
 
         .btn {
+            white-space: nowrap;
             width: 100%;
 
-            @include breakpoint-min('tab-land') {
+            @include breakpoint-min('tab-port') {
                 width: auto;
             }
         }
@@ -28,10 +33,11 @@
 
     img {
         height: 50vh;
-        width: calc(100% + map-get($sizes, 'lg'));
+        max-height: 40rem;
         object-fit: cover;
         object-position: 35%;
         transform: translateX(-#{map-get($sizes, 'sm')});
+        width: calc(100% + map-get($sizes, 'lg'));
 
         @include breakpoint-min('tab-port') {
             width: calc(100% + map-get($sizes, 'xl'));
@@ -42,9 +48,7 @@
             width: 100%;
             height: auto;
             object-fit: contain;
+            transform: translateX(0);
         }
-        // width: 100%;
-        // object-fit: cover;
-        // object-position: right;
     }
 }
