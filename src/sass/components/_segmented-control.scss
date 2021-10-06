@@ -3,6 +3,7 @@
 .segmented-control {
     display: flex;
     justify-content: center;
+    line-height: 1;
     margin: map-get($sizes, 'lg') 0;
     position: relative;
 

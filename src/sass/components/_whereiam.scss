@@ -3,7 +3,7 @@
 .whereiam {
     overflow: hidden;
     &__heading {
-        align-items: flex-start;
+        align-items: center;
         display: flex;
         flex-wrap: wrap;
         gap: map-get($sizes, 'lg');

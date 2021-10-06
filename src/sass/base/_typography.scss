@@ -22,17 +22,13 @@ h6 {
 }
 
 h2 {
-    color: $color-secondary;
+    color: var(--color-active);
     font-size: 3.6rem;
     margin-bottom: map-get($sizes, 'lg');
 
     @include breakpoint-min('tab-land') {
         font-size: 4.8rem;
         margin-bottom: map-get($sizes, 'xl');
-    }
-
-    @media (prefers-color-scheme: dark) {
-        color: $color-primary;
     }
 
     @at-root .bg-gradient & {
