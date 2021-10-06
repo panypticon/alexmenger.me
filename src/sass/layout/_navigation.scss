@@ -93,6 +93,9 @@
         &--close {
             z-index: 10;
             display: block;
+            position: fixed;
+            right: map-get($sizes, 'sm');
+            top: map-get($sizes, 'sm');
 
             span:nth-child(1) {
                 top: 1.2rem;
@@ -163,7 +166,7 @@
             justify-content: center;
             left: 0;
             overflow: hidden;
-            position: absolute;
+            position: fixed;
             padding: map-get($sizes, 'sm');
             right: 0;
             top: 0;
