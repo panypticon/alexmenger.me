@@ -29,8 +29,8 @@ $shade-09: rgb(46, 46, 46);
 //////////////////////////////////////////////////
 // Gradients
 
-$gradient-secondary: linear-gradient(270deg, $color-secondary, $color-secondary-dark);
-$gradient-tertiary: linear-gradient(270deg, $color-tertiary-dark, $color-tertiary-dark);
+$gradient-secondary: linear-gradient(120deg, $color-secondary-dark, $color-secondary);
+$gradient-tertiary: linear-gradient(120deg, $color-tertiary-dark, $color-tertiary);
 
 //////////////////////////////////////////////////
 // Spacing
