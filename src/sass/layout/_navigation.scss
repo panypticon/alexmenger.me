@@ -134,27 +134,7 @@
             margin-left: map-get($sizes, 'lg') - 0.3rem * 2;
         }
 
-        a {
-            padding: 0.3rem;
-            transition: translateY 0.2s ease-in;
-
-            &:link,
-            &:visited,
-            &:hover,
-            &:active {
-                align-items: center;
-                color: inherit;
-                display: flex;
-                text-decoration: none;
-            }
-
-            @media (hover: hover) {
-                &:hover {
-                    transform: translateY(-0.1rem);
-                    color: $color-primary;
-                }
-            }
-        }
+        @include nav-links;
 
         @at-root .nav__icon--close + & {
             align-items: center;
