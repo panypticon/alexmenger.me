@@ -17,7 +17,11 @@
 }
 
 body {
-    background-color: var(--background-active);
+    background-color: var(--color-active);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    > main {
+        background-color: var(--background-active);
+    }
 }
 
 .hidden {
