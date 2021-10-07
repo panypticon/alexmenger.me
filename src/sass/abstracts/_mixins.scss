@@ -41,3 +41,29 @@
     font-weight: 800;
     text-transform: uppercase;
 }
+
+// Navigation links
+
+@mixin nav-links {
+    a {
+        padding: 0.3rem;
+        transition: translateY 0.2s ease-in;
+
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+            align-items: center;
+            color: inherit;
+            display: flex;
+            text-decoration: none;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                transform: translateY(-0.1rem);
+                color: $color-primary;
+            }
+        }
+    }
+}
