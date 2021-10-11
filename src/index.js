@@ -1,4 +1,4 @@
-import { throttle } from 'lodash';
+import throttle from 'lodash/throttle';
 
 import SegmentedControl from './scripts/segmentedControl';
 import WhatIDoCard from './scripts/whatIDoCard';
