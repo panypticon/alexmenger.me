@@ -161,4 +161,23 @@
             }
         }
     }
+
+    &.sticky {
+        animation: move-in 0.2s ease-out forwards;
+        background: var(--gradient-active);
+        box-shadow: 0 0 map-get($sizes, 'lg') rgba($shade-08, 0.5);
+        position: fixed;
+        transform: translateY(-13.6rem);
+
+        @include breakpoint-min('tab-port') {
+            .nav__main {
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            .nav__border {
+                border: none;
+            }
+        }
+    }
 }

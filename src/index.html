@@ -26,10 +26,10 @@
                             <span class="nav__icon-elem"></span>
                         </div>
                         <ul class="nav__list">
-                            <li class="nav__list--active"><a href="#">Who</a></li>
-                            <li><a href="#">What</a></li>
-                            <li><a href="#">Why</a></li>
-                            <li><a href="#">Where</a></li>
+                            <li class="nav__list--active"><a href="#" data-target="whoiam">Who</a></li>
+                            <li><a href="#" data-target="whatido">What</a></li>
+                            <li><a href="#" data-target="whyicare">Why</a></li>
+                            <li><a href="#" data-target="whereiam">Where</a></li>
                             <li>
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </li>
@@ -40,7 +40,7 @@
                     </div>
                 </nav>
             </header>
-            <div class="row bg-gradient">
+            <div class="row bg-gradient" id="whoiam">
                 <section class="hithere">
                     <div class="hithere__img"></div>
                     <div class="hithere__textbox">
@@ -52,7 +52,7 @@
                     </div>
                 </section>
             </div>
-            <div class="row">
+            <div class="row" id="whatido">
                 <section class="whatido">
                     <h2>This Is What I Do</h2>
                     <div class="segmented-control">
@@ -115,11 +115,9 @@
                                 <ul class="codeview__list">
                                     <li>I write modern, scalable <em>HTML</em> and <em>CSS</em> (Sass rocks)</li>
                                     <li>
-                                        I can handle <em>Web APIs</em> using up-to-date <em>JavaScript</em> (
-                                        <pre><code
+                                        I can handle <em>Web APIs</em> using up-to-date <em>JavaScript</em> (<code
                                             >`ES${new Date().getFullYear()}`</code
-                                        ></pre>
-                                        )
+                                        >)
                                     </li>
                                     <li>I'm fluent in functional <em>React</em> and its ecosystem (Hooks, baby)</li>
                                 </ul>
@@ -153,8 +151,8 @@
                                             <img src="https://picsum.photos/seed/1/200" alt="Project image" />
                                             <div class="card__description">
                                                 <p>
-                                                    This. A responsive one-pager using a custom webpack setup and some
-                                                    Sass magic. Designed it myself.
+                                                    <code>this</code>. A responsive one-pager using custom Webpack/Babel
+                                                    tooling, and a hand-made slider. Designed it myself.
                                                 </p>
                                                 <ul>
                                                     <li>
@@ -292,7 +290,7 @@
                     </div>
                 </section>
             </div>
-            <div class="row bg-gradient">
+            <div class="row bg-gradient" id="whyicare">
                 <section class="whyicare">
                     <h2>Here's Why I Care (and So Should You)</h2>
                     <div class="whyicare__container">
@@ -327,7 +325,7 @@
                     </div>
                 </section>
             </div>
-            <div class="row">
+            <div class="row" id="whereiam">
                 <section class="whereiam">
                     <div class="whereiam__heading">
                         <h2>And Leipzig Is Where I Live</h2>
