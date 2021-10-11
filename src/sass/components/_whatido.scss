@@ -75,20 +75,6 @@
                     top: -0.3rem;
                 }
             }
-
-            pre {
-                display: inline;
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 1.7rem;
-                line-height: inherit;
-                white-space: pre-wrap;
-            }
-
-            code {
-                border-radius: 0.4rem;
-                padding: 0.2rem;
-                display: inline;
-            }
         }
 
         &__backend {
@@ -218,6 +204,20 @@
 
             .card__demo {
                 margin-right: map-get($sizes, 'lg');
+            }
+        }
+
+        code {
+            background-color: $shade-01;
+            border-radius: 0.4rem;
+            padding: 0.1rem 0.3rem;
+            display: inline;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: inherit;
+            line-height: inherit;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: $shade-08;
             }
         }
     }
