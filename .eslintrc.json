@@ -9,6 +9,7 @@
             }
         ],
         "prefer-template": "off",
+        "prefer-destructuring": ["error", { "object": true, "array": false }],
         "indent": [1, 4],
         "object-curly-spacing": 1,
         "no-multiple-empty-lines": [
