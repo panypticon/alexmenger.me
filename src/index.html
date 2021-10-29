@@ -68,17 +68,7 @@
                     </div>
                     <div class="views-container">
                         <ul class="cardview">
-                            <li class="card card--dci">
-                                <img class="card__background" src="images/what_dci.jpg" alt="background image" />
-                                <div class="card__btn-container">
-                                    <span class="btn btn--primary card__btn">UX // UI</span>
-                                </div>
-                                <div class="card__caption">
-                                    <h3>DCI</h3>
-                                    <p>Digital learning platform</p>
-                                </div>
-                            </li>
-                            <li class="card card--tfw">
+                            <li class="card card--tfw" data-card="tfw">
                                 <img class="card__background" src="images/what_tfw.jpg" alt="background image" />
                                 <div class="card__btn-container">
                                     <span class="btn btn--primary card__btn">UX // Concept</span>
@@ -88,7 +78,7 @@
                                     <p>Vacation rental management software</p>
                                 </div>
                             </li>
-                            <li class="card card--shore">
+                            <li class="card card--shore" data-card="shore">
                                 <img class="card__background" src="images/what_shore.jpg" alt="background image" />
                                 <div class="card__btn-container">
                                     <span class="btn btn--primary card__btn">UX // UI</span>
@@ -98,7 +88,7 @@
                                     <p>Customer and appointment management for SMBs</p>
                                 </div>
                             </li>
-                            <li class="card card--ch24">
+                            <li class="card card--ch24" data-card="ch24">
                                 <img class="card__background" src="images/what_ch24.jpg" alt="background image" />
                                 <div class="card__btn-container">
                                     <span class="btn btn--primary card__btn">Product // UX</span>
@@ -106,6 +96,19 @@
                                 <div class="card__caption">
                                     <h3>CHECK24</h3>
                                     <p>Price/feature comparison for insurance products</p>
+                                </div>
+                            </li>
+                            <li class="card card--dci" data-card="dci">
+                                <img class="card__background" src="images/what_dci.jpg" alt="background image" />
+                                <div class="card__btn-container">
+                                    <!-- <span class="btn btn--primary card__btn">UX // UI</span> -->
+                                    <span class="btn btn--primary card__btn">Cooperative Design</span>
+                                </div>
+                                <div class="card__caption">
+                                    <!-- <h3>DCI</h3> -->
+                                    <h3>Methodology</h3>
+                                    <!-- <p>Digital learning platform</p> -->
+                                    <p>Design sprints & design thinking</p>
                                 </div>
                             </li>
                         </ul>
@@ -152,7 +155,7 @@
                                             <div class="card__description">
                                                 <p>
                                                     <code>this</code>. A responsive one-pager using custom Webpack/Babel
-                                                    tooling, and a hand-made slider. Designed it myself.
+                                                    tooling, and a hand-made carousel component. Designed it myself.
                                                 </p>
                                                 <ul>
                                                     <li>
@@ -331,7 +334,6 @@
                         <h2>And Leipzig Is Where I Live</h2>
                         <button class="btn btn--primary">Let's get in touch</button>
                     </div>
-                    <img src="images/whereiam_le.svg" alt="Leipzig" />
                 </section>
             </div>
             <footer class="footer row bg-gradient">

@@ -22,6 +22,10 @@
     transition: all 0.2s ease-out;
     transform-style: preserve-3d;
 
+    .btn {
+        color: $color-dark;
+    }
+
     @media (hover: hover) {
         transform: none;
         top: map-get($sizes, 'sm');

@@ -40,6 +40,24 @@
     }
 }
 
+@keyframes to-left {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes to-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+
 .fade-in-up-card {
     animation: fade-in-up 0.3s ease-out both;
 

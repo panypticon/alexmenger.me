@@ -24,6 +24,7 @@
             )
             left / 202%;
         background-position: right;
+        color: $color-dark;
         transition: background-position 0.2s ease-in-out;
 
         box-shadow: 0 0 0.5rem $color-primary;
