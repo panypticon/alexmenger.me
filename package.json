@@ -12,10 +12,10 @@
         "deploy": "cd dist/ && git init && git add . && git commit -m 'deploy' && git remote add origin git@github.com:AlexDCI/alexmenger.me.git && git checkout -b prod && git push --force origin prod && cd .."
     },
     "devDependencies": {
-        "@babel/core": "^7.15.8",
-        "@babel/plugin-proposal-class-properties": "^7.14.5",
-        "@babel/plugin-transform-runtime": "^7.15.8",
-        "@babel/preset-env": "^7.15.8",
+        "@babel/core": "^7.16.0",
+        "@babel/plugin-proposal-class-properties": "^7.16.0",
+        "@babel/plugin-transform-runtime": "^7.16.0",
+        "@babel/preset-env": "^7.16.0",
         "babel-loader": "^8.2.3",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^9.0.1",
