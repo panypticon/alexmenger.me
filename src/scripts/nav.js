@@ -1,7 +1,7 @@
 export const handleNavClick = (evt, navIcon) => {
-    evt.preventDefault();
     const { target } = evt.target.dataset;
     if (target) {
+        evt.preventDefault();
         navIcon.classList.remove('nav__icon--close');
         const destination = document.getElementById(target);
         window.scrollTo({
