@@ -163,7 +163,7 @@
     }
 
     &.sticky {
-        animation: move-in 0.2s ease-out forwards;
+        animation: move-in 0.2s ease-out both;
         background: var(--gradient-active);
         box-shadow: 0 0 map-get($sizes, 'lg') rgba($shade-08, 0.5);
         position: fixed;
