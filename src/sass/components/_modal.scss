@@ -63,7 +63,8 @@
             }
         }
 
-        &-company {
+        &-company,
+        &-heading {
             @include ui-font-style;
         }
 
@@ -116,6 +117,7 @@
 
             @include breakpoint-min('tab-land') {
                 font-size: 3.6rem;
+                margin-bottom: map-get($sizes, 'sm');
             }
 
             &:not(:first-of-type) {
@@ -123,9 +125,21 @@
             }
         }
 
-        p {
+        h3 {
+            @include breakpoint-min('tab-land') {
+                font-size: 3.2rem;
+                margin-bottom: map-get($sizes, 'sm');
+            }
+        }
+
+        p,
+        ul {
             line-height: 1.35;
             margin-bottom: map-get($sizes, 'xs');
+        }
+
+        ul {
+            list-style-position: inside;
         }
     }
 

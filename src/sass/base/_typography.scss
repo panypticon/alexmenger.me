@@ -39,10 +39,33 @@ h2 {
 
 h3 {
     font-size: 3.2rem;
-    margin-bottom: map-get($sizes, 'sm');
+    margin: map-get($sizes, 'sm') 0;
 
     @include breakpoint-min('tab-land') {
         font-size: 3.6rem;
         margin-bottom: map-get($sizes, 'lg');
+    }
+}
+
+p {
+    a {
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+            border-radius: 0.2rem;
+            color: var(--color-active);
+            font-weight: 800;
+            padding: 0.2rem;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: rgba($color-primary, 0.25);
+        }
+
+        &:active {
+            background-color: rgba($color-primary, 0.5);
+        }
     }
 }

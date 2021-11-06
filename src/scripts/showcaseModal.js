@@ -12,7 +12,7 @@ const handleCarouselKeys = (evt, component) => {
     }
 };
 
-const handleCloseModal = evt => {
+export const handleCloseModal = evt => {
     const { target } = evt;
     if (target.classList.contains('can-close') || evt.key === 'Escape') {
         const modal = target.closest('.modal__background') || document.querySelector('.modal__background');

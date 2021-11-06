@@ -5,7 +5,8 @@ import WhatIDoCard from './scripts/whatIDoCard';
 import WhyICareItem from './scripts/whyICareItem';
 import { handleNavClick, handleStickyNav, handleCurrentNavItem } from './scripts/nav';
 import { handleOpenModal } from './scripts/showcaseModal';
-import { handleOpenForm } from './scripts/contactForm';
+import { handleOpenForm } from './scripts/contactFormModal';
+import { handleOpenLegal } from './scripts/legalModal';
 import wherIAmLE from './images/whereiam_le.svg';
 
 import '@/sass/index.scss';
@@ -27,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event Listeners and Initialization
     menuIcon.addEventListener('click', () => menuIcon.classList.toggle('nav__icon--close'));
-    document.body.addEventListener(
-        'click',
-        evt => evt.target.closest('button')?.dataset.target === 'getintouch' && handleOpenForm(evt)
-    );
+    document.body.addEventListener('click', evt => {
+        evt.target.closest('button')?.dataset.target === 'getintouch' && handleOpenForm(evt);
+        evt.target.dataset.target === 'legal' && handleOpenLegal(evt);
+    });
     // Make nav sticky when scrolling down
     document.addEventListener(
         'scroll',
