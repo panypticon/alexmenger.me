@@ -21,7 +21,7 @@
         display: grid;
         grid-template-columns: 1fr;
         overflow: hidden;
-        transform: translateZ(0); /* Hack to make overflow work in Safari */
+        transform: translateZ(0); /* Make overflow work in Safari */
         position: relative;
 
         @include breakpoint-min('tab-port') {
