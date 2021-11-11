@@ -1,9 +1,25 @@
 import { handleCloseModal } from './showcaseModal';
 
-const handleSubmit = evt => {
+const handleSubmit = async evt => {
     evt.preventDefault();
-    console.log(evt.target.elements);
-    // https://formspree.io/f/mdoyqorn
+    const {
+        name: { value: name },
+        email: { value: email },
+        message: { value: message }
+    } = evt.target.elements;
+    try {
+        const res = await fetch('https://formspree.io/f/mdoyqorn', {
+            method: 'POST',
+            body: JSON.stringify({ name, email, message }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        if (!res.ok) throw new Error();
+        console.log(res);
+    } catch (err) {
+        console.log(err);
+    }
 };
 
 const createModal = () => {
@@ -27,26 +43,25 @@ const createModal = () => {
     modalContent.classList.add('modal__content');
 
     const modalForm = document.createElement('form');
-    modalForm.classList.add('modal__form');
+    modalForm.classList.add('modal__form', 'modal__text');
     modalForm.addEventListener('submit', handleSubmit);
 
     modalForm.insertAdjacentHTML(
         'beforeend',
-        `
-    <div class="input-wrapper">
-        <input type="text" id="name" name="name" required>
-        <label for="name">Name</label>
-    </div>
-    <div class="input-wrapper">
-        <input type="email" id="email" name="email" required>
-        <label for="email">E-mail</label>
-    </div>
-    <div class="input-wrapper">
-        <textarea id="message" name="message" required></textarea>
-        <label for="message">Message</label>
-    </div>
-    <button type="submit" class="btn btn--primary">Send</button>
-    `
+        `<p>Just drop me a note, and I'll get back to you as soon as I can.</p>
+        <div class="input-wrapper">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Name</label>
+        </div>
+        <div class="input-wrapper">
+            <input type="email" id="email" name="email" required>
+            <label for="email">E-mail</label>
+        </div>
+        <div class="input-wrapper">
+            <textarea id="message" name="message" required></textarea>
+            <label for="message">Message</label>
+        </div>
+        <button type="submit" class="btn btn--primary">Send</button>`
     );
 
     modalHeader.appendChild(modalHeaderHeading);
