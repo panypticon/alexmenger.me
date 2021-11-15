@@ -2,7 +2,7 @@ import { handleCloseModal } from './showcaseModal';
 
 const handleSubmit = evt => {
     evt.preventDefault();
-    console.log(evt.target.elements);
+    // console.log(evt.target.elements);
     // https://formspree.io/f/mdoyqorn
 };
 
@@ -27,22 +27,23 @@ const createModal = () => {
     modalContent.classList.add('modal__content');
 
     const modalForm = document.createElement('form');
-    modalForm.classList.add('modal__form');
+    modalForm.classList.add('modal__form', 'modal__text');
     modalForm.addEventListener('submit', handleSubmit);
 
     modalForm.insertAdjacentHTML(
         'beforeend',
         `
+    <p>Drop me a note, and I'll get back to you as soon as I can.</p>
     <div class="input-wrapper">
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" placeholder="name" required autofocus>
         <label for="name">Name</label>
     </div>
     <div class="input-wrapper">
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="email" required>
         <label for="email">E-mail</label>
     </div>
     <div class="input-wrapper">
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message" placeholder="message" required></textarea>
         <label for="message">Message</label>
     </div>
     <button type="submit" class="btn btn--primary">Send</button>

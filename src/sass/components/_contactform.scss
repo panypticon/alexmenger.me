@@ -1,0 +1,64 @@
+@use '../abstracts/' as *;
+
+.modal__form {
+    p {
+        margin-bottom: map-get($sizes, 'lg');
+    }
+
+    .input-wrapper {
+        margin-bottom: map-get($sizes, 'sm') * 1.5;
+        position: relative;
+
+        input,
+        textarea {
+            background-color: transparent;
+            border: .2rem solid $shade-07;
+            border-radius: map-get($sizes, 'sm');
+            color: inherit;
+            display: inline-block;
+            font-family: inherit;
+            font-size: inherit;
+            margin-top: 2.8rem;
+            padding: map-get($sizes, 'xs') map-get($sizes, 'sm');
+            width: 100%;
+
+            &:focus {
+                border-color: $color-primary;
+                caret-color: $color-primary;
+                outline: none;
+
+                &:not(:placeholder-shown) {
+                    + label {
+                        color: $color-primary;
+                    }
+                }
+            }
+
+            &:not(:placeholder-shown) {
+                + label {
+                    left: 0;
+                    top: 0;
+                }
+            }
+
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+
+        textarea {
+            min-height: map-get($sizes, 'xl');
+        }
+
+        label {
+            color: $shade-07;
+            font-size: 1.6rem;
+            font-weight: 600;
+            left: map-get($sizes, 'sm');
+            position: absolute;
+            top: 3.9rem;
+            transition: all .15s ease-in;
+            z-index: -10;
+        }
+    }
+}
