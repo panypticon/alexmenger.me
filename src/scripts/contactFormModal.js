@@ -1,9 +1,27 @@
 import { handleCloseModal } from './showcaseModal';
 
-const handleSubmit = evt => {
+const handleSubmit = async evt => {
     evt.preventDefault();
-    // console.log(evt.target.elements);
-    // https://formspree.io/f/mdoyqorn
+    const {
+        name: { value: name },
+        email: { value: email },
+        message: { value: message }
+    } = evt.target.elements;
+    try {
+        const res = await fetch('https://formspree.is/f/mdoyqorn', {
+            method: 'POST',
+            body: JSON.stringify({ name, email, message }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        if (!res.ok) throw new Error();
+        console.log(res);
+    } catch (err) {
+        const errorContainer = document.querySelector('.modal__form .error-container');
+        errorContainer.innerHTML =
+            '<i class="bi bi-exclamation-octagon-fill"></i> Oops, looks like something went wrong. Please try again in a few minutes.';
+    }
 };
 
 const createModal = () => {
@@ -35,7 +53,7 @@ const createModal = () => {
         `
     <p>Drop me a note, and I'll get back to you as soon as I can.</p>
     <div class="input-wrapper">
-        <input type="text" id="name" name="name" placeholder="name" required autofocus>
+        <input type="text" id="name" name="name" placeholder="name" required>
         <label for="name">Name</label>
     </div>
     <div class="input-wrapper">
@@ -46,7 +64,10 @@ const createModal = () => {
         <textarea id="message" name="message" placeholder="message" required></textarea>
         <label for="message">Message</label>
     </div>
-    <button type="submit" class="btn btn--primary">Send</button>
+    <div class="btn-wrapper">
+        <button type="submit" class="btn btn--primary">Send</button>
+        <span class="error-container"></span>
+    </div>
     `
     );
 
@@ -57,6 +78,10 @@ const createModal = () => {
     modalBox.appendChild(modalContent);
     modalBackground.appendChild(modalBox);
     document.body.appendChild(modalBackground);
+
+    const firstInput = modalForm.querySelector('input');
+    firstInput.focus();
+
     modalBackground.addEventListener('click', handleCloseModal);
 };
 

@@ -12,7 +12,7 @@
         input,
         textarea {
             background-color: transparent;
-            border: .2rem solid $shade-07;
+            border: 0.2rem solid $shade-07;
             border-radius: map-get($sizes, 'sm');
             color: inherit;
             display: inline-block;
@@ -32,6 +32,16 @@
                         color: $color-primary;
                     }
                 }
+
+                &:invalid {
+                    border-color: $color-tertiary;
+
+                    &:not(:placeholder-shown) {
+                        + label {
+                            color: $color-tertiary;
+                        }
+                    }
+                }
             }
 
             &:not(:placeholder-shown) {
@@ -48,6 +58,7 @@
 
         textarea {
             min-height: map-get($sizes, 'xl');
+            resize: none;
         }
 
         label {
@@ -57,8 +68,27 @@
             left: map-get($sizes, 'sm');
             position: absolute;
             top: 3.9rem;
-            transition: all .15s ease-in;
+            transition: all 0.15s ease-in;
             z-index: -10;
+        }
+    }
+
+    button {
+        margin-top: map-get($sizes, 'lg');
+        width: 100%;
+
+        @include breakpoint-min('tab-port') {
+            width: auto;
+        }
+    }
+
+    .error-container {
+        color: $color-tertiary;
+        margin-left: map-get($sizes, 'sm');
+
+        i.bi {
+            display: inline-block;
+            margin-right: map-get($sizes, 'xs');
         }
     }
 }
