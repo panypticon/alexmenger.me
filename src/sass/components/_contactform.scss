@@ -1,0 +1,108 @@
+@use '../abstracts/' as *;
+
+.modal__form {
+    p {
+        margin-bottom: map-get($sizes, 'lg');
+    }
+
+    .input-wrapper {
+        margin-bottom: map-get($sizes, 'sm') * 1.5;
+        position: relative;
+
+        input,
+        textarea {
+            background-color: transparent;
+            border: 0.2rem solid $shade-06;
+            border-radius: map-get($sizes, 'sm');
+            color: inherit;
+            display: inline-block;
+            font-family: inherit;
+            font-size: inherit;
+            margin-top: 2.8rem;
+            padding: map-get($sizes, 'xs') map-get($sizes, 'sm');
+            width: 100%;
+
+            &:focus {
+                border-color: var(--color-active);
+                caret-color: var(--color-active);
+                outline: none;
+
+                + label {
+                    color: var(--color-active);
+                    left: 0;
+                    top: 0;
+                }
+            }
+
+            &:not(:placeholder-shown) {
+                + label {
+                    left: 0;
+                    top: 0;
+                }
+            }
+
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+
+        textarea {
+            min-height: map-get($sizes, 'xl');
+            resize: none;
+        }
+
+        label {
+            color: $shade-06;
+            font-size: 1.6rem;
+            font-weight: 600;
+            left: map-get($sizes, 'sm');
+            position: absolute;
+            top: 3.9rem;
+            transition: all 0.15s ease-in;
+            z-index: -10;
+        }
+    }
+
+    button {
+        margin-top: map-get($sizes, 'lg');
+        width: 100%;
+
+        @include breakpoint-min('tab-port') {
+            width: auto;
+        }
+    }
+
+    .error-container {
+        color: $color-tertiary;
+        margin-left: map-get($sizes, 'sm');
+
+        i.bi {
+            display: inline-block;
+            margin-right: map-get($sizes, 'xs');
+        }
+    }
+}
+
+.modal__sent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    i.bi {
+        color: $color-primary;
+        font-size: 8rem;
+    }
+
+    p {
+        margin-top: map-get($sizes, 'sm');
+    }
+
+    button {
+        margin-top: map-get($sizes, 'lg');
+        width: 100%;
+
+        @include breakpoint-min('tab-port') {
+            width: auto;
+        }
+    }
+}

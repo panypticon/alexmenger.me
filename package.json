@@ -1,6 +1,6 @@
 {
     "name": "alexmenger.me",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "My portfolio website",
     "main": "index.js",
     "author": "Alex Menger",
@@ -14,8 +14,8 @@
     "devDependencies": {
         "@babel/core": "^7.16.0",
         "@babel/plugin-proposal-class-properties": "^7.16.0",
-        "@babel/plugin-transform-runtime": "^7.16.0",
-        "@babel/preset-env": "^7.16.0",
+        "@babel/plugin-transform-runtime": "^7.16.4",
+        "@babel/preset-env": "^7.16.4",
         "babel-loader": "^8.2.3",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^9.1.0",
@@ -36,14 +36,14 @@
         "html-webpack-plugin": "^5.5.0",
         "mini-css-extract-plugin": "^2.4.4",
         "postcss-loader": "^6.2.0",
-        "postcss-preset-env": "^6.7.0",
+        "postcss-preset-env": "^7.0.0",
         "prettier": "^2.4.1",
         "sass": "^1.43.4",
         "sass-loader": "^12.3.0",
         "style-loader": "^3.3.1",
-        "webpack": "^5.64.0",
+        "webpack": "^5.64.1",
         "webpack-cli": "^4.9.1",
-        "webpack-dev-server": "^4.4.0",
+        "webpack-dev-server": "^4.5.0",
         "webpack-merge": "^5.8.0"
     },
     "repository": {
