@@ -12,7 +12,7 @@
         input,
         textarea {
             background-color: transparent;
-            border: 0.2rem solid $shade-07;
+            border: 0.2rem solid $shade-06;
             border-radius: map-get($sizes, 'sm');
             color: inherit;
             display: inline-block;
@@ -23,24 +23,14 @@
             width: 100%;
 
             &:focus {
-                border-color: $color-primary;
-                caret-color: $color-primary;
+                border-color: var(--color-active);
+                caret-color: var(--color-active);
                 outline: none;
 
-                &:not(:placeholder-shown) {
-                    + label {
-                        color: $color-primary;
-                    }
-                }
-
-                &:invalid {
-                    border-color: $color-tertiary;
-
-                    &:not(:placeholder-shown) {
-                        + label {
-                            color: $color-tertiary;
-                        }
-                    }
+                + label {
+                    color: var(--color-active);
+                    left: 0;
+                    top: 0;
                 }
             }
 
@@ -62,7 +52,7 @@
         }
 
         label {
-            color: $shade-07;
+            color: $shade-06;
             font-size: 1.6rem;
             font-weight: 600;
             left: map-get($sizes, 'sm');
@@ -89,6 +79,30 @@
         i.bi {
             display: inline-block;
             margin-right: map-get($sizes, 'xs');
+        }
+    }
+}
+
+.modal__sent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    i.bi {
+        color: $color-primary;
+        font-size: 8rem;
+    }
+
+    p {
+        margin-top: map-get($sizes, 'sm');
+    }
+
+    button {
+        margin-top: map-get($sizes, 'lg');
+        width: 100%;
+
+        @include breakpoint-min('tab-port') {
+            width: auto;
         }
     }
 }

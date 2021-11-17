@@ -8,7 +8,7 @@ const handleSubmit = async evt => {
         message: { value: message }
     } = evt.target.elements;
     try {
-        const res = await fetch('https://formspree.is/f/mdoyqorn', {
+        const res = await fetch('https://formspree.io/f/mdoyqorn', {
             method: 'POST',
             body: JSON.stringify({ name, email, message }),
             headers: {
@@ -16,7 +16,16 @@ const handleSubmit = async evt => {
             }
         });
         if (!res.ok) throw new Error();
-        console.log(res);
+        evt.target.removeEventListener('submit', handleSubmit);
+        const modalContent = document.querySelector('.modal__content');
+        modalContent.innerHTML = `
+        <div class="modal__text modal__sent">
+            <h2>Message Sent</h2>
+            <i class="bi bi-check-circle"></i>
+            <p>Hang in there, I'll get back to you ASAP.</p>
+            <button class="btn btn--primary can-close">Close</button>
+        </div>
+        `;
     } catch (err) {
         const errorContainer = document.querySelector('.modal__form .error-container');
         errorContainer.innerHTML =
@@ -65,7 +74,7 @@ const createModal = () => {
         <label for="message">Message</label>
     </div>
     <div class="btn-wrapper">
-        <button type="submit" class="btn btn--primary">Send</button>
+        <button type="submit" class="btn btn--primary">Send message</button>
         <span class="error-container"></span>
     </div>
     `
