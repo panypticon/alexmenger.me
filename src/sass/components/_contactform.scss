@@ -47,7 +47,7 @@
         }
 
         textarea {
-            min-height: map-get($sizes, 'xl');
+            min-height: map-get($sizes, 'xl') * 2;
             resize: none;
         }
 
