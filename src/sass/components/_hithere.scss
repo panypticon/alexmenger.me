@@ -81,6 +81,10 @@
                 @include breakpoint-min('tab-port') {
                     max-width: none;
                 }
+
+                @include breakpoint-min('tab-land') {
+                    font-size: 4.8rem;
+                }
             }
 
             p {
