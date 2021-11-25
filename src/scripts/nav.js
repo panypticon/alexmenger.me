@@ -1,7 +1,10 @@
+import smoothscroll from 'smoothscroll-polyfill';
+
 export const handleNavClick = (evt, navIcon) => {
     const { target } = evt.target.dataset;
     if (target) {
         evt.preventDefault();
+        smoothscroll.polyfill();
         navIcon.classList.remove('nav__icon--close');
         const destination = document.getElementById(target);
         window.scrollTo({
