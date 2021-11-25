@@ -58,6 +58,15 @@
     }
 }
 
+@keyframes jump {
+    from {
+        transform: translateY(0.1rem);
+    }
+    to {
+        transform: translateY(-0.1rem);
+    }
+}
+
 .fade-in-up-card {
     animation: fade-in-up 0.3s ease-out both;
 
@@ -68,4 +77,8 @@
 
 .fade-in-up {
     animation: fade-in-up 0.3s ease-out both;
+}
+
+.jump {
+    animation: jump 0.4s ease-out alternate infinite;
 }

@@ -7,6 +7,9 @@ const handleSubmit = async evt => {
         email: { value: email },
         message: { value: message }
     } = evt.target.elements;
+    const button = document.querySelector('.modal__form button[type="submit"]');
+    button.innerHTML = '<i class="bi bi-send jump"></i> Sending…';
+    button.disabled = true;
     try {
         const res = await fetch('https://formspree.io/f/mdoyqorn', {
             method: 'POST',
@@ -61,17 +64,19 @@ const createModal = () => {
         'beforeend',
         `
     <p>Drop me a note, and I'll get back to you as soon as I can.</p>
-    <div class="input-wrapper">
-        <input type="text" id="name" name="name" placeholder="name" required>
-        <label for="name">Name</label>
-    </div>
-    <div class="input-wrapper">
-        <input type="email" id="email" name="email" placeholder="email" required>
-        <label for="email">E-mail</label>
-    </div>
-    <div class="input-wrapper">
-        <textarea id="message" name="message" placeholder="message" required></textarea>
-        <label for="message">Message</label>
+    <div class="modal__form--grid">
+        <div class="input-wrapper">
+            <input type="text" id="name" name="name" placeholder="name" required>
+            <label for="name">Name</label>
+        </div>
+        <div class="input-wrapper">
+            <input type="email" id="email" name="email" placeholder="email" required>
+            <label for="email">E-mail</label>
+        </div>
+        <div class="input-wrapper textarea">
+            <textarea id="message" name="message" placeholder="message" required></textarea>
+            <label for="message">Message</label>
+        </div>
     </div>
     <div class="btn-wrapper">
         <button type="submit" class="btn btn--primary">Send message</button>
