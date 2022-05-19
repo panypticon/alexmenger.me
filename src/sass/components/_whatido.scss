@@ -16,8 +16,8 @@
     .codeview {
         animation: fade-in-up 0.3s ease-out both;
         background: linear-gradient(180deg, var(--color-active) 0%, var(--color-active) 2rem, transparent 2rem);
-        border: 0.2rem solid var(--color-active);
-        border-radius: map-get($sizes, 'sm');
+        border: 0.1rem solid var(--color-active);
+        border-radius: map-get($sizes, 'xs');
         display: grid;
         grid-template-columns: 1fr;
         overflow: hidden;
