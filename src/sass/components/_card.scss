@@ -6,7 +6,7 @@
 
 .card {
     background: var(--gradient-active);
-    border-radius: map-get($sizes, 'sm');
+    border-radius: map-get($sizes, 'xs');
     box-shadow: 0 0 0.5rem $color-secondary-light;
     padding: map-get($sizes, 'lg');
     backface-visibility: hidden;
@@ -14,7 +14,7 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    opacity: 0.4;
+    opacity: 0.8;
     overflow: hidden;
     position: relative;
     transform: translateY(map-get($sizes, 'sm'));
@@ -82,7 +82,7 @@
         max-width: 100rem;
         mix-blend-mode: multiply;
         object-position: center;
-        opacity: 70%;
+        opacity: 0.8;
         position: absolute;
         top: -30%;
         width: 200%;

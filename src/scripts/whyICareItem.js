@@ -4,7 +4,7 @@ class WhyICareItem {
         this.handleIntersectionObserver = this.handleIntersectionObserver.bind(this);
         this.observer = new IntersectionObserver(this.handleIntersectionObserver, {
             rootMargin: '0px',
-            threshold: 0.35
+            threshold: 0.25
         });
         this.observer.observe(this.item);
     }

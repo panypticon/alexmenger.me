@@ -31,8 +31,8 @@
         justify-content: space-between;
 
         @include breakpoint-min('tab-port') {
-            border: 0.2rem solid var(--background-active);
-            border-radius: map-get($sizes, 'sm');
+            border: 0.1rem solid var(--background-active);
+            border-radius: map-get($sizes, 'xs');
             padding: map-get($sizes, 'sm') map-get($sizes, 'lg');
         }
     }

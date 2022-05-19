@@ -61,16 +61,7 @@
             animation: fade-in-up 0.5s ease-out backwards;
 
             @include breakpoint-min('tab-port') {
-                background-color: var(--background-active);
-                border-radius: map-get($sizes, 'sm');
-                box-shadow: 0 0 map-get($sizes, 'xs') $shade-02 inset;
-                color: var(--contrast-active);
                 max-width: 50%;
-                padding: map-get($sizes, 'lg');
-
-                @media (prefers-color-scheme: dark) {
-                    box-shadow: 0 0 map-get($sizes, 'xs') $shade-09 inset;
-                }
             }
 
             h1 {
